@@ -5,6 +5,7 @@ const AddManualExpense = () => {
   const [isBodyExpanded, setIsBodyExpanded] = useState<boolean>(false);
   return (
     <div>
+      {/* TODO: Make the Card field into a reusable component */}
       <Card
         isBlurred
         className="mb-[15px] w-[100%] bg-background/60 dark:bg-default-100/50"
