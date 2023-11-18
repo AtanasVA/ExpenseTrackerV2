@@ -5,34 +5,33 @@ import { getCurrentMonth } from "~/utils/getCurrentMonth";
 
 const MonthlyChart = () => {
   return (
-    //TODO: Make the Card field into a reusable component
-    <Card
-      isBlurred
-      className="w-[100%] bg-background/60 dark:bg-default-100/50"
-    >
-      <CardBody className="gap-6 p-[20px]">
-        <div className="flex w-[100%] items-center justify-between">
-          <h1>Filter by month</h1>
-          <Select
-            label="Select a month"
-            defaultSelectedKeys={[`${getCurrentMonth()}`]}
-            className="max-w-xs"
-          >
-            {MONTHS.map((month) => (
-              <SelectItem key={month} value={month}>
-                {month}
-              </SelectItem>
-            ))}
-          </Select>
-        </div>
-        <div className="flex h-[180px] justify-evenly">
+    <>
+      <div className="flex w-[100%] items-center justify-between">
+        <h2>Filter by month</h2>
+        <Select
+          label="Select a month"
+          defaultSelectedKeys={[`${getCurrentMonth()}`]}
+          className="max-w-xs"
+        >
           {MONTHS.map((month) => (
-            //TODO: The value data of the ChartBar component should be the sum of all expenses for that month
-            <ChartBar key={month} label={month} value={20} maxValue={100} />
+            <SelectItem key={month} value={month}>
+              {month}
+            </SelectItem>
           ))}
-        </div>
-      </CardBody>
-    </Card>
+        </Select>
+      </div>
+      {/* TODO: Make the Card field into a reusable component */}
+      <Card className="dark:bg-content2">
+        <CardBody>
+          <div className="flex h-[180px] justify-evenly">
+            {MONTHS.map((month) => (
+              //TODO: The value data of the ChartBar component should be the sum of all expenses for that month
+              <ChartBar key={month} label={month} value={50} maxValue={100} />
+            ))}
+          </div>
+        </CardBody>
+      </Card>
+    </>
   );
 };
 

@@ -3,7 +3,10 @@ import { Providers } from "./_providers";
 
 import { api } from "~/utils/api";
 
-import "~/styles/globals.css";
+import "~/styles/global.styles.css";
+import "~/styles/expenseItem.styles.css";
+import "~/styles/expenseItemDate.styles.css";
+import "~/styles/monthlyFilterChart.styles.css";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (

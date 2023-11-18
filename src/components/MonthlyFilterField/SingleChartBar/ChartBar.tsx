@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { calcFillAmmount, getColumnColor } from "~/utils/chartBars";
 
 type ChartBarProps = {
   label: string;
@@ -7,18 +8,25 @@ type ChartBarProps = {
 };
 
 export const ChartBar = ({ label, value, maxValue }: ChartBarProps) => {
+  const barColor = getColumnColor(value, maxValue);
   const [fillAmount, setFillAmount] = useState<string>("0%");
 
   useEffect(() => {
     if (maxValue) {
-      setFillAmount(`${Math.round((value / maxValue) * 100)}%`);
+      setFillAmount(`${calcFillAmmount(value, maxValue)}%`);
     }
   }, [maxValue, value]);
 
   return (
-    <div className="chart-bar">
+    <div className="chart-bar ">
       <div className="chart-bar__inner">
-        <div className="chart-bar__fill" style={{ height: fillAmount }} />
+        <div
+          className={`chart-bar__fill`}
+          style={{
+            height: fillAmount,
+            backgroundColor: `hsl(var(--nextui-${barColor}-300))`,
+          }}
+        />
       </div>
       <div className="chart-bar__label">{label}</div>
     </div>
