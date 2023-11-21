@@ -21,6 +21,7 @@ const AddManualExpense = () => {
           {isBodyExpanded ? (
             <div className="flex w-[90%] flex-col gap-[10px]">
               <div className="flex flex-1 gap-[10px]">
+                {/* //TODO: Export Inputs to styled component */}
                 <Input
                   size="lg"
                   type="email"
