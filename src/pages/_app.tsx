@@ -7,6 +7,7 @@ import "~/styles/global.styles.css";
 import "~/styles/expenseItem.styles.css";
 import "~/styles/expenseItemDate.styles.css";
 import "~/styles/monthlyFilterChart.styles.css";
+import "~/styles/dropzone.styles.css";
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
