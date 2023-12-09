@@ -1,0 +1,29 @@
+.dropzone-container {
+  display: flex;
+  cursor: pointer;
+  margin: 0 0 1.5rem 0;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  /* background: alpha(theme.palette.background.dark; 0.6); */
+  /* border: `2px dashed ${theme.palette.border.main}`; */
+  border-radius: 20px;
+  text-align: center;
+}
+
+.dropzone-text-container {
+  display: inline-flex;
+  white-space: nowrap;
+  /* "@media (max-width: 340px)": {
+    whiteSpace: "initial";
+  }; */
+  gap: 0.4rem;
+}
+
+.dropzone-upload-text {
+  color: hsl(var(--nextui-default));
+}
+
+.dropzone-secondary-text {
+  color: hsl(var(--nextui-default-600));
+}
