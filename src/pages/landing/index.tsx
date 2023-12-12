@@ -1,7 +1,7 @@
 import { Card, CardBody } from "@nextui-org/react";
-import AddManualExpense from "~/components/AddExpenseField/AddManualExpense";
-import ExpenseItem from "~/components/ExpensesField/ExpenseItem";
-import MonthlyChart from "~/components/MonthlyFilterField/MonthlyChart/MonthlyChart";
+import AddManualExpense from "~/shared/components/AddExpenseField/AddManualExpense";
+import ExpenseItem from "~/shared/components/ExpensesField/ExpenseItem";
+import MonthlyChart from "~/shared/components/MonthlyFilterField/MonthlyChart/MonthlyChart";
 import { Divider } from "@nextui-org/react";
 
 const EXPENSES_BOILERPLATE = [
@@ -32,6 +32,7 @@ const KingsLanding = () => {
           <Card className=" dark:bg-content2">
             <CardBody className="flex items-center justify-between">
               {EXPENSES_BOILERPLATE.map(({ date, title, amount }) => (
+                //TODO: Add key to fragment to eliminate cl error
                 <>
                   <ExpenseItem
                     key={title}

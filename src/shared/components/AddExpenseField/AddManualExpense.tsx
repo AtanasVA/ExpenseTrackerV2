@@ -1,5 +1,7 @@
 import { Card, CardBody, Button, Input } from "@nextui-org/react";
 import { useState } from "react";
+import { AddImage } from "~/shared/SVG/AddFile";
+import { AddExpense } from "~/shared/SVG/AddExpense";
 
 const AddManualExpense = () => {
   const [isBodyExpanded, setIsBodyExpanded] = useState<boolean>(false);
@@ -63,12 +65,16 @@ const AddManualExpense = () => {
               </div>
             </div>
           ) : (
-            <Button
-              className="h-[60px] w-[30%]"
-              onClick={() => setIsBodyExpanded(true)}
-            >
-              Add new expense
-            </Button>
+            <div className="inline-flex gap-[10px]">
+              <Button onClick={() => setIsBodyExpanded(true)}>
+                <AddExpense />
+                Add new expense
+              </Button>
+              <Button onClick={() => setIsBodyExpanded(true)}>
+                <AddImage />
+                Upload monthly expenses
+              </Button>
+            </div>
           )}
         </CardBody>
       </Card>
