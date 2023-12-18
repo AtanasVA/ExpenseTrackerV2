@@ -9,7 +9,6 @@ export const AddExpense = () => {
       stroke="currentColor"
       stroke-width="1.25"
       stroke-linecap="round"
-      stroke-linejoin="round"
     >
       <path d="M5 12h14" />
       <path d="M12 5v14" />
