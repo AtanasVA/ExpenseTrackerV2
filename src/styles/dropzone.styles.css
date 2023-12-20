@@ -1,0 +1,23 @@
+.main-container {
+  border: 3px dashed hsl(var(--nextui-default-100));
+  width: 100%;
+  height: 100%;
+  margin-bottom: 15px;
+  border-radius: 12px;
+}
+
+.text-container {
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+}
+.text-title {
+  font-size: large;
+  color: hsl(var(--nextui-default-300));
+}
+.text-helper {
+  font-size: small;
+  color: hsl(var(--nextui-default-300));
+}

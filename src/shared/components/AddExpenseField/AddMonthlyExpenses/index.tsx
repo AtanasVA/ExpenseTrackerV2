@@ -1,5 +1,6 @@
 import type { Dispatch, FC, SetStateAction } from "react";
 import { Button } from "@nextui-org/react";
+import Dropzone from "../../Dropzone";
 
 type AddMonthlyExpnesesProps = {
   setIsAddMonthlyExpneses: Dispatch<SetStateAction<boolean>>;
@@ -10,8 +11,11 @@ const AddMonthlyExpneses: FC<AddMonthlyExpnesesProps> = ({
 }) => {
   return (
     <>
+      <Dropzone
+        title={"Drag or drop files here, or click to select"}
+        helperText={"Accepted formats: .xml"}
+      />
       <div className="flex flex-col items-center gap-[10px]">
-        <h1>DROPZONE COMPONENT</h1>
         <div className="flex  gap-[10px]">
           <Button
             onClick={() => {
